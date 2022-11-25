@@ -274,6 +274,7 @@ p {
         font-size: 6vh;
         position: absolute;
         top: 1vh;
+        right: 1vw;
         margin: 0;
         display: block;
     }
