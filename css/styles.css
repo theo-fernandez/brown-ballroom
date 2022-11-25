@@ -1,0 +1,329 @@
+:root {
+    --light: #FFFFFF;
+    --medium: #3C3C3C;
+    --dark: #181818;
+    --light-primary: #F6E9E9;
+    --primary: #CC0000;
+    --primary-dark: #B50000;
+
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark);
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+}
+
+section:last-child {
+    margin-bottom: 10vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+p>a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+p>a:hover {
+    color: var(--primary-dark);
+}
+
+.material-symbols-rounded.x-icon {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    height: 7.5vh;
+    display: flex;
+    justify-content: center;
+}
+
+#nav-links {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.material-symbols-rounded.menu-icon {
+    display: none;
+}
+
+nav>div>a {
+    font-weight: 600;
+    font-size: 2.5vh;
+    text-align: center;
+    padding: 0 2vw;
+}
+
+nav>div>a.active {
+    color: var(--primary-dark);
+}
+
+a {
+    transition: 0.2s ease-out;
+    color: var(--dark);
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+a:active {
+    color: var(--primary-dark);
+}
+
+.hero-image {
+    width: 100%;
+    height: 80vh;
+    background-color: var(--dark);
+    background-size: cover;
+    background-image: url(../media/Brown\ Ballroom\ Team.png);
+    background-position: center top;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+h1 {
+    color: var(--light);
+    font-weight: 800;
+    font-size: 10vh;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.material-symbols-rounded.down-arrow {
+    font-size: 13vh;
+    width: 10vw;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5vh 0;
+    margin: 2vh 0;
+}
+
+h2 {
+    text-align: center;
+    color: var(--dark);
+    font-size: 4vh;
+    font-weight: 600;
+    margin: 0 0 2vh;
+}
+
+h3 {
+    font-size: 2.5vh;
+    margin: 3vh 0 0;
+}
+
+h4 {
+    font-weight: 600;
+}
+
+br {
+    display: none;
+}
+
+p {
+    color: var(--medium);
+    width: 45%;
+    font-size: 2vh;
+    line-height: 200%;
+    margin: 1vh 0 2vh;
+}
+
+.button-container {
+    width: 40%;
+    margin: 4vh 0 0 0;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-container>a {
+    height: 6vh;
+    width: 13vw;
+    border-radius: 6vh;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+
+    transition: 0.2s ease-out;
+}
+
+.button-container>a:active {
+    box-shadow: none;
+}
+
+.button-container>a>div {
+    font-size: 2vh;
+    font-weight: 600;
+    line-height: 2vh;
+}
+
+.primary-button {
+    background-color: var(--primary);
+}
+
+.primary-button:hover {
+    box-shadow: 0.5vh 0.5vw 1rem #cccccc;
+}
+
+.primary-button:active {
+    background-color: var(--primary-dark);
+}
+
+.primary-button>div {
+    color: var(--light);
+}
+
+.secondary-button {
+    background-color: var(--light);
+    border: 0.25vh solid var(--primary);
+}
+
+.secondary-button:hover {
+    box-shadow: 0.5vh 0.5vw 1rem #cccccc;
+}
+
+.secondary-button:active {
+    background-color: var(--light-primary);
+}
+
+.secondary-button>div {
+    color: var(--primary);
+}
+
+.calendar {
+    border: 0;
+    width: 65vw;
+    height: 75vh;
+    margin: 4vh 0;
+}
+
+.social-media-icons {
+    width: 40%;
+    margin: 2vh 0 0 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-media-icons>a {
+    font-size: 6vh;
+    color: var(--medium);
+}
+
+.social-media-icons>a:hover {
+    color: var(--primary);
+}
+
+.social-media-icons>a:active {
+    color: var(--primary-dark);
+}
+
+@media (orientation: portrait) {
+    nav {
+        justify-content: end;
+        align-items: center;
+    }
+
+    nav>div>a {
+        margin: 4vh 0;
+        font-size: 3vh;
+    }
+
+    #nav-links {
+        background-color: var(--light);
+        width: 100vw;
+        height: 0;
+
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        transition: 0.5s;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .material-symbols-rounded.menu-icon {
+        font-size: 6vh;
+        margin: 0 2vw;
+        display: block;
+    }
+
+    .material-symbols-rounded.x-icon {
+        font-size: 6vh;
+        position: absolute;
+        top: 1vh;
+        margin: 0;
+        display: block;
+    }
+
+    .hero-image {
+        background-image: url(../media/Brown\ Ballroom\ Team\ Mobile.png);
+        height: 70vh;
+    }
+
+    h1 {
+        font-size: 5vh;
+        margin-bottom: 25%;
+    }
+
+    .material-symbols-rounded.down-arrow {
+        font-size: 12vh;
+    }
+
+    h2 {
+        margin: 0 0 2vh 0;
+    }
+
+    br {
+        display: inline;
+    }
+
+    h4 {
+        margin: 0 0 1vh;
+    }
+
+    p {
+        width: 80%;
+        margin: 0;
+    }
+
+    .button-container {
+        width: 80%;
+    }
+
+    .button-container>a {
+        width: 33vw;
+        height: 6vh;
+    }
+
+    .calendar {
+        width: 95vw;
+        height: 65vh;
+    }
+
+    .social-media-icons {
+        width: 80%;
+    }
+}
